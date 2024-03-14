@@ -1,6 +1,7 @@
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
+import cors from 'cors'; // Import the 'cors' package
 
 function importJSON() {
     const pathToJson = path.resolve('./serverside/data.json');
@@ -11,6 +12,8 @@ function importJSON() {
 const data = importJSON();
 const app = express();
 const port = 3000;
+
+app.use(cors()); // Use the 'cors' middleware to enable CORS
 
 app.get("/products", (req, res) => {
     res.send(data.products);

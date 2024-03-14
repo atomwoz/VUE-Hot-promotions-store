@@ -27,6 +27,9 @@ const promotions = {
     getters: {
         GET_PROMOTIONS_LIST(state) {
             return state.promotionsList
+        },
+        GET_PROMOTION_BY_ID: (state) => (id) => {
+            return state.promotionsList.find(promotion => promotion.id === id)
         }
     },
 
@@ -44,7 +47,7 @@ const promotions = {
 
             getPromotions()
                 .then((data) => {
-                    commit('SET_PROMOTIONS_LIST', data.promotions)
+                    commit('SET_PROMOTIONS_LIST', data)
                 })
                 .catch((error) => {
                     commit('SET_PROMOTIONS_ERROR', 'server error!!!')

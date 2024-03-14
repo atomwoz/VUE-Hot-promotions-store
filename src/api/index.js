@@ -7,7 +7,6 @@ const get = (url) =>
         axios
           .get(url)
           .then((response) => {
-            console.log('data', response.data)
             resolve(response.data)
           })
           .catch((error) => {
@@ -19,7 +18,14 @@ const get = (url) =>
   })
 
 const getPromotions = () => get('http://localhost:3000/promotions')
+const getProducts = () => get('http://localhost:3000/products')
+const getPromotion = (id) => get(`http://localhost:3000/promotion/${id}`)
+const getProduct = (id) => get(`http://localhost:3000/product/${id}`)
+
+
 export {
-  getPromotions
-  //tu będą pozostałe metody
+  getPromotions,
+  getProducts,
+  getPromotion,
+  getProduct
 }

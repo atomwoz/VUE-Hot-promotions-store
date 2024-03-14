@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 //@ oznacza katalog /src
 
 import Home from '@/views/HomeView.vue'
+import PromotionView from '@/views/PromotionView.vue'
 //import AboutView from '@/views/AboutView.vue'
 
 //lazy load - renderuje się tylko gdy jest potrzebny a nie z gory
@@ -20,9 +21,9 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/promotion/:id',
+      name: 'PromotionView',
+      component: PromotionView
     },
     {
       path: '/:pathMatch(.*)*',
