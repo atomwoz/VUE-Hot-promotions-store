@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4>Footer </h4>
+        <h4>Vite Shop - Antoni Woźniak </h4>
     </div>
 </template>
 
@@ -10,4 +10,14 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+div {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+</style>

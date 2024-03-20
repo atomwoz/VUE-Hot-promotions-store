@@ -1,7 +1,7 @@
 <template>
-  <div :style="contStyle">
-    <h3>{{ this.promotion.header }}</h3>
-    <h2>{{ this.promotion.description }}</h2>
+  <div :style="contStyle" class="promotion">
+    <h2>{{ this.promotion.header }}</h2>
+    <h3>{{ this.promotion.description }}</h3>
   </div>
 </template>
 
@@ -21,11 +21,26 @@ export default {
       }
 
       return {
-        background: `url(${imageUrl})`
+        backgroundImage: `url(${imageUrl})`
       }
     }
   }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.promotion {
+  padding: 10px;
+  margin: 10px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: 800;
+  background-size: cover;
+}
+</style>
