@@ -3,6 +3,7 @@
         <RouterLink to="/" exact>Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/nnn">Not found</RouterLink>
+        <RouterLink to="/register" class="register">Register</RouterLink>
     </div>
 </template>
 
@@ -19,5 +20,11 @@ div {
     justify-content: space-around;
     padding: 10px;
     background-color: #f4f4f4;
+}
+
+.register {
+    background-color: #333;
+    color: white;
+    border-radius: 900px;
 }
 </style>

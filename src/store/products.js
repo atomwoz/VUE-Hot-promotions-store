@@ -29,7 +29,8 @@ const products = {
             return state.productList
         },
         GET_PRODUCT_BY_ID: (state) => (id) => {
-            return state.productList.find(product => product.id === id)
+            let x = state.productList.find(product => product.id === id)
+            return x ? x : { loading: true, name: 'Loading', price: "...", shortName: "", description: "" }
         }
     },
 
