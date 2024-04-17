@@ -2,10 +2,12 @@ import { createStore } from 'vuex'
 
 import promotions from './promotions'
 import products from './products'
+import userinfo from './user'
 
 const modules = {
   promotions,
-  products
+  products,
+  userinfo
   // kolejne moduły
 }
 
